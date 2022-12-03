@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <script src="src/scripts/app.js" async defer></script>
+</head>
+<body>
+
+<form action="" class="contact-form" method="post" novalidate>
+    <div class="contact-form__group">
+        <label for="fullName" class="contact-form__label">Imię i nazwisko<sup class="contact-form__sup">*</sup></label>
+        <input type="text" id="fullName" class="contact-form__input" name="fullName" required minlength="2">
+    </div>
+    <div class="contact-form__group">
+        <label for="topic" class="contact-form__label">Wybierz temat wiadomości<sup class="contact-form__sup">*</sup></label>
+        <select name="topic" id="topic" class="contact-form__input" required>
+            <option value="">---</option>
+            <option value="1">Reklamacja</option>
+            <option value="2">Zakupy</option>
+            <option value="3">Opinia</option>
+        </select>
+    </div>
+    <div class="contact-form__group">
+        <label for="phone" class="contact-form__label">Telefon</label>
+        <input type="tel" name="phone" id="phone" class="contact-form__input">
+    </div>
+    <div class="contact-form__group">
+        <input type="radio" name="sex" id="male" class="contact-form__input">
+        <label for="male" class="contact-form__label">Mężczyzna</label>
+        <input type="radio" name="sex" id="female" class="contact-form__input">
+        <label for="female" class="contact-form__label">Kobieta</label>
+    </div>
+    <div class="contact-form__group">
+        <label for="message" class="contact-form__label">Wpisz wiadomość<sup class="contact-form__sup">*</sup></label>
+        <textarea name="message" id="message" cols="30" rows="10" class="contact-form__input" required></textarea>
+    </div>
+    <div class="contact-form__group">
+        <input type="checkbox" name="agreement" id="agreement" class="contact-form__input">
+        <label for="agreement" class="contact-form__label">Czy wycinamy nerke?</label>
+    </div>
+    <button type="submit" class="contact-form__submit">Wyślij</button>
+
+</form>
+
+</body>
+</html>
