@@ -12,6 +12,6 @@ btnsRef.forEach(function (btnRef){
     btnRef.addEventListener('click', function (){
         toggleText(btnRef);
         btnRef.nextElementSibling.classList.toggle('show-code__code--hidden');
-    });
-});
+    })
+})
 
