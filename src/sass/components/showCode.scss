@@ -1,6 +1,46 @@
+@import "../_partials/helpers";
+
 .show-code {
-    &__visualisation {}
-    &__btn {}
-    &__code {}
-    &__code--hidden {}
+    max-width: toRem(600px);
+    border: toRem(1px) solid darkgray;
+    border-radius: toRem(4px);
+    margin: auto auto toRem(10px);
+    position: relative;
+
+    &__visualisation {
+        padding: toRem(10px);
+        border-bottom: toRem(1px) solid darkgray;
+    }
+    &__btn {
+        display: block;
+        margin: auto;
+        background-color: white;
+        border: toRem(3px) solid green;
+        border-radius: toRem(26px);
+        text-transform: uppercase;
+        font-family: sans-serif;
+        color: green;
+        padding: toRem(5px) toRem(15px);
+        cursor: pointer;
+        transition: all 400ms;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &:hover {
+            color: white;
+            background-color: green;
+        }
+    }
+    &__code {
+        background: lightcyan;
+        padding: toRem(24px) toRem(10px) toRem(10px);
+        margin: 0;
+        border-bottom-left-radius: toRem(4px);
+        border-bottom-right-radius: toRem(4px);
+
+    }
+    &__code--hidden {
+        display: none;
+    }
 }
