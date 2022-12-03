@@ -4,7 +4,7 @@
     max-width: toRem(600px);
     border: toRem(1px) solid darkgray;
     border-radius: toRem(4px);
-    margin: auto auto toRem(10px);
+    margin: auto auto toRem(26px);
     position: relative;
 
     &__visualisation {
@@ -24,6 +24,7 @@
         cursor: pointer;
         transition: all 400ms;
         position: absolute;
+        z-index: 42;
         left: 50%;
         transform: translate(-50%, -50%);
 
@@ -38,9 +39,14 @@
         margin: 0;
         border-bottom-left-radius: toRem(4px);
         border-bottom-right-radius: toRem(4px);
+        transition: all 800ms;
 
     }
     &__code--hidden {
-        display: none;
+        opacity: 0;
+        height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        overflow: hidden;
     }
 }
