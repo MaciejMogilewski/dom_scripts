@@ -1,7 +1,8 @@
 const hamburgerRef = document.querySelector('[data-js="hamburger-btn"]');
+const overlayRef = document.querySelector('[data-js="overlay"]');
 
 hamburgerRef.addEventListener('click', function (){
-    hamburgerRef.classList.toggle('drawer__hamburger--active')
-    hamburgerRef.closest('[data-js="drawer"]').classList.toggle('drawer--active')
-    hamburgerRef.closest('[data-js="overlay"]').classList.toggle('overlay--active')
+    overlayRef.classList.toggle('active');
+    console.log(overlayRef)
 });
+
