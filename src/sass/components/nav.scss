@@ -1,20 +1,67 @@
 @import "../_partials/helpers";
 
+body {
+    padding-top: 0;
+}
+
 .content {
     padding: toRem(20px);
 }
 
+.overlay {
+    &--active {
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
 .drawer {
-    &__hdl {}
-    &__nav {}
-    &__item {}
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f4f1e4;
+    padding: toRem(10px);
+    max-width: 80vw;
+    width: 100%;
+    min-height: calc(100vh - toRem(20px));
+    border-top-right-radius: toRem(10px);
+    border-bottom-right-radius: toRem(10px);
+    font-family: 'Open sans', sans-serif;
+
+    &__hdl {
+        color: dimgray;
+        font-size: toRem(15px);
+        font-weight: 500;
+    }
+    &__nav {
+        display: flex;
+        flex-direction: column;
+    }
+    &__item {
+        display: flex;
+        justify-content: flex-start;
+        font-size: toRem(15px);
+        font-weight: 500;
+        text-decoration: none;
+        color: rgb(72, 71, 58);
+        padding: toRem(15px) toRem(18px);
+        line-height: 1.2;
+        border-radius: toRem(24px);
+        &:hover {
+            background-color: #e6e4bf;
+        }
+    }
     &__icon {
         &--inbox {}
         &--outbox {}
         &--favorites {}
         &--trash {}
     }
-    &__text {}
+    &__text {
+        flex-grow: 10;
+    }
     &__badge {}
 }
 
