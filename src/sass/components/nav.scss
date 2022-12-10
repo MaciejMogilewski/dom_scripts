@@ -9,6 +9,7 @@ body {
 }
 
 .overlay {
+    transition: all 400ms ease-in-out;
     &--active {
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.7);
@@ -20,7 +21,7 @@ body {
 .drawer {
     position: absolute;
     top: 0;
-    left: 0;
+    left: calc(-80% - 20px);
     background-color: #f4f1e4;
     padding: toRem(10px);
     max-width: 80vw;
@@ -29,16 +30,23 @@ body {
     border-top-right-radius: toRem(10px);
     border-bottom-right-radius: toRem(10px);
     font-family: 'Open sans', sans-serif;
+    transition: all 400ms ease-in-out;
+
+    &--active {
+        left: 0;
+    }
 
     &__hdl {
         color: dimgray;
         font-size: toRem(15px);
         font-weight: 500;
     }
+
     &__nav {
         display: flex;
         flex-direction: column;
     }
+
     &__item {
         display: flex;
         justify-content: flex-start;
@@ -49,20 +57,80 @@ body {
         padding: toRem(15px) toRem(18px);
         line-height: 1.2;
         border-radius: toRem(24px);
+
         &:hover {
             background-color: #e6e4bf;
         }
     }
+
     &__icon {
-        &--inbox {}
-        &--outbox {}
-        &--favorites {}
-        &--trash {}
+        &--inbox {
+        }
+
+        &--outbox {
+        }
+
+        &--favorites {
+        }
+
+        &--trash {
+        }
     }
+
     &__text {
         flex-grow: 10;
     }
-    &__badge {}
+
+    &__badge {
+    }
+
+    &__hamburger {
+        width: toRem(46px);
+        height: toRem(46px);
+        line-height: 0;
+        cursor: pointer;
+        overflow: hidden;
+        padding: toRem(10px);
+        position: absolute;
+        right: toRem(-76px);
+
+
+        span {
+            position: relative;
+            display: inline-block;
+            width: toRem(46px);
+            height: toRem(9px);
+            margin-top: toRem(4.5px);
+            margin-bottom: toRem(4.5px);
+            background-color: black;
+            transition: all 400ms ease-in-out;
+            border-radius: toRem(4px);
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &--active {
+            span:first-child {
+                transform-origin: center left;
+                transform: rotate(50deg);
+            }
+
+            span:nth-child(2) {
+                transform: translateX(-200%);
+            }
+
+            span:last-child {
+                transform-origin: center left;
+                transform: rotate(-50deg);
+            }
+        }
+    }
 }
 
 
