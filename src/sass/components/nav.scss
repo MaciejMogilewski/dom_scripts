@@ -3,3 +3,19 @@
 .content {
     padding: toRem(20px);
 }
+
+.drawer {
+    &__hdl {}
+    &__nav {}
+    &__item {}
+    &__icon {
+        &--inbox {}
+        &--outbox {}
+        &--favorites {}
+        &--trash {}
+    }
+    &__text {}
+    &__badge {}
+}
+
+
