@@ -13,6 +13,11 @@
     padding: toRem(10px);
     width: 100%;
     box-sizing: border-box;
+    display: none;
+    &.active {
+        display: block;
+    }
+
     &__box {
         max-width: toRem(1200px);
         margin-inline: auto;
