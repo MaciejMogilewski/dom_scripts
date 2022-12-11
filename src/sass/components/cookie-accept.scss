@@ -1,7 +1,22 @@
 @import "../_partials/helpers";
 
+
+.container {
+    min-height: 100vh;
+}
+
 .cookies-bar {
-    &__box {}
+    position: sticky;
+    bottom: 0;
+    background-color: lightgray;
+    border-top: 1px solid gray;
+    padding: toRem(10px);
+    width: 100%;
+    box-sizing: border-box;
+    &__box {
+        max-width: toRem(1200px);
+        margin-inline: auto;
+    }
     &__title {}
     &__text {}
     &__accept-button {}
