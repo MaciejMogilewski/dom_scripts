@@ -1,14 +1,10 @@
 @import "../_partials/helpers";
 
-.box {
-    background: lightblue;
-    padding: toRem(10px);
-}
 
 .theme-switch {
     position: relative;
     display: inline-block;
-    background: blue;
+    background: lightblue;
     width: toRem(60px);
     height: toRem(34px);
     border-radius: toRem(17px);
@@ -32,11 +28,25 @@
         display: none;
 
         &:checked + label {
-            background: red;
+            background: black;
             span {
                 left: 30px;
             }
         }
     }
 }
+
+.box {
+    background: lightblue;
+    padding: toRem(10px);
+    .dark-theme & {
+        background: black;
+        color: white;
+
+        a {
+            color: white;
+        }
+    }
+}
+
 
