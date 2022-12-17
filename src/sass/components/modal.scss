@@ -37,6 +37,11 @@ body {
     left: 0;
     right: 0;
     transition: transform 300ms ease-in-out;
+    box-sizing: border-box;
+
+    @media screen and (max-width: toRem(530px)){
+        width: calc(100% - 30px);
+    }
 
     &--active {
         transform: translateY(0);
@@ -70,6 +75,7 @@ body {
     &__footer {
         display: flex;
         justify-content: flex-end;
+        flex-wrap: wrap;
     }
     &__btn {
         &--secondary {
