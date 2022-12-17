@@ -11,20 +11,20 @@
 </head>
 <body>
 
-<button class="btn">Launch demo modal</button>
+<button class="btn" data-js="btn-open-modal">Launch demo modal</button>
 
-<div class="overlay"></div>
-    <div class="modal">
+<div class="overlay-modal" data-js="overlay-modal" data-exit></div>
+    <div class="modal" data-js="modal">
         <div class="modal__header">
             <h2 class="modal__title">Modal title</h2>
-            <button class="modal__exit-btn"></button>
+            <button class="modal__exit-btn" data-exit></button>
         </div>
         <div class="modal__content">
             <p>Woohoo, you're reading this text in a modal!</p>
         </div>
         <div class="modal__footer">
-            <button class="modal__btn modal__btn--secondary">Close</button>
-            <button class="modal__btn modal__btn--primary">Save changes</button>
+            <button class="modal__btn modal__btn--secondary" data-exit>Close</button>
+            <button class="modal__btn modal__btn--primary" data-exit>Save changes</button>
         </div>
     </div>
 
